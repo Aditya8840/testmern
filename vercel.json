@@ -18,7 +18,13 @@
             "dest": "3request.js"
         },{
             "src": "/(.*)",
-            "dest": "build/"
-        } 
+            "dest": "build/**"
+        },{
+            "src": "/",
+            "dest": "build/index.html"
+        },{
+            "src": "/(.+)",
+            "dest": "build/$1"
+        }
     ]
 }
