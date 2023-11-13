@@ -4,12 +4,21 @@
         {
             "src": "./index.js",
             "use": "@vercel/node"
+        },{
+            "src": "build/",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/api/quotes",
             "dest": "3request.js"
-        }
+        },{
+            "src": "/api/quotes/(.*)",
+            "dest": "3request.js"
+        },{
+            "src": "/(.*)",
+            "dest": "build/"
+        } 
     ]
 }
