@@ -2,7 +2,7 @@
      
     "builds": [
         {
-            "src": "./3request.js",
+            "src": "./3requests.js",
             "use": "@vercel/node"
         },{
             "src": "build/",
@@ -12,10 +12,10 @@
     "routes": [
         {
             "src": "/api/quotes",
-            "dest": "3request.js"
+            "dest": "3requests.js"
         },{
             "src": "/api/quotes/(.*)",
-            "dest": "3request.js"
+            "dest": "3requests.js"
         },{
             "src": "/(.*)",
             "dest": "build/**"
